@@ -1,0 +1,22 @@
+@at-root {
+  @-ms-viewport { width: device-width; }
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font: $font-weight-base unquote(14px + '/' + $line-height-base) $font-family-base;
+}
+
+section {
+  @extend .container-fluid;
+}

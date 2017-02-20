@@ -1,0 +1,20 @@
+$brand-primary:   #CC8080;
+$brand-secondary: #80CC80;
+$brand-tertiary:  #8080CC;
+
+$brand-black:     #111111;
+$brand-white:     #FDFDFD;
+
+$gray-dark:     lighten($brand-black, 15);
+$gray-darker:   lighten($brand-black, 30);
+$gray-darkest:  lighten($brand-black, 45);
+
+$gray-light:    darken($brand-white, 45);
+$gray-lighter:  darken($brand-white, 30);
+$gray-lightest: darken($brand-white, 15);
+
+$brand-success:   #5CB85C;
+$brand-info:      #5BC0DE;
+$brand-warning:   #F0AD4E;
+$brand-danger:    #D9534F;
+$brand-inverse:   $gray-dark;
