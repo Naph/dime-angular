@@ -1,7 +1,10 @@
 {
+  "name": "naph/dime-angular2",
+  "author": "Lachlan du Preez <naph@getgood.gg> https://getgood.gg",
+  "repository": "https://github.com/Naph/dime-angular2.git",
   "scripts": {
-    "build:dev": "webpack --env dev",
-    "build:prod": "webpack --env prod",
+    "build:dev": "./node_modules/.bin/webpack --env dev",
+    "build:prod": "./node_modules/.bin/webpack --env prod",
     "start": "./node_modules/.bin/webpack-dev-server --env dev"
   },
   "devDependencies": {
