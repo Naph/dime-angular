@@ -11,8 +11,7 @@
       "dom"
     ],
     "typeRoots": [
-      "./src/typings.d.ts",
-      "./node_modules/@types/"
+      "node_modules/@types"
     ],
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true

@@ -1,13 +1,18 @@
 {
-  "name": "naph/dime-angular2",
+  "name": "dime-angular",
   "author": "Lachlan du Preez <naph@getgood.gg> https://getgood.gg",
-  "repository": "https://github.com/Naph/dime-angular2.git",
+  "repository": "https://github.com/Naph/dime-angular.git",
   "scripts": {
     "build:dev": "./node_modules/.bin/webpack --env dev",
     "build:prod": "./node_modules/.bin/webpack --env prod",
     "start": "./node_modules/.bin/webpack-dev-server --env dev"
   },
   "devDependencies": {
+    "@angular/cli": "^1.0.0-beta.32.3",
+    "@angular/compiler-cli": "^2.4.7",
+    "@angular/platform-server": "^2.4.7",
+    "@angular/upgrade": "^2.4.7",
+    "@types/node": "^7.0.5",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.0.4",
     "bootstrap": "4.0.0-alpha.6",
@@ -27,20 +32,16 @@
     "webpack-merge": "^3.0.0"
   },
   "dependencies": {
-    "@angular/cli": "^1.0.0-beta.32.3",
     "@angular/common": "^2.4.7",
-    "@angular/compiler-cli": "^2.4.7",
+    "@angular/compiler": "^2.4.7",
     "@angular/core": "^2.4.7",
     "@angular/http": "^2.4.7",
     "@angular/platform-browser": "^2.4.7",
     "@angular/platform-browser-dynamic": "^2.4.7",
-    "@angular/platform-server": "^2.4.7",
     "@angular/router": "^3.4.7",
-    "@angular/upgrade": "^2.4.7",
     "@ngtools/webpack": "^1.2.10",
-    "reflect-metadata": "^0.1.9",
+    "core-js": "^2.4.1",
     "rxjs": "^5.1.1",
-    "systemjs": "^0.20.9",
     "zone.js": "^0.7.7"
   }
 }

@@ -21,9 +21,6 @@ module.exports = (env) => webpackMerge(require('./config/' + env + '.js'), {
   },
   module: {
     rules: [{
-      test: /\.html$/,
-      loader: 'raw-loader'
-    }, {
       test: /\.scss$/,
       loaders: ExtractTextPlugin.extract({
         fallback: 'style-loader', use: 'css-loader?-url!sass-loader'
@@ -33,19 +30,20 @@ module.exports = (env) => webpackMerge(require('./config/' + env + '.js'), {
   resolve: {
     extensions: ['.ts', '.js', '.json', '.scss'],
     modules: [
-      path.resolve(__dirname, 'src'),
-      "node_modules"
+      'node_modules',
+      path.resolve(__dirname, 'src')
     ]
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({ name: ['vendor', 'polyfills'] }),
 
-    new webpack.ContextReplacementPlugin(
-      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-      __dirname
-    ),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(env)
+      }
+    }),
     new HtmlWebpackPlugin({
-      template: 'src/index.ejs',
+      template: path.resolve(__dirname, 'src/index.ejs'),
       chunksSortMode: 'dependency'
     }),
     new CleanWebpackPlugin(['dist']),
