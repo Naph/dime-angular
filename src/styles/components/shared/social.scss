@@ -1,0 +1,23 @@
+a.social {
+  font-family: 'icon';
+  @extend .icon;
+}
+
+$social-icons: (
+  skype:   (content: icon(4), color: #4C9DE7),
+  steam:   (content: icon(5), color: #221F20),
+  twitch:  (content: icon(6), color: #6441A5),
+  twitter: (content: icon(7), color: #4090FF),
+  vimeo:   (content: icon(8), color: #59B6EF),
+  youtube: (content: icon(9), color: #BB0000)
+);
+
+@each $social, $config in $social-icons {
+  a.social[onHover*="#{$social}"] {
+    color: white;
+    background: map-get($config, color);
+    &:before {
+      content: map-get($config, content);
+    }
+  }
+}

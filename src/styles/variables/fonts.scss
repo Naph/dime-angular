@@ -1,0 +1,16 @@
+$font-family-sans-serif: Raleway, sans-serif;
+$font-family-serif:      'Georgia', Times, serif;
+
+$link-color:            $brand-secondary;
+$link-decoration:       none;
+$link-hover-color:      darken($brand-secondary, 20);
+$link-hover-decoration: none;
+
+$font-weight-normal:    normal;
+
+$line-height-lg: (4 / 3);
+$line-height-sm: 1.5;
+
+$small-font-size: 90%;
+
+$text-muted: $gray;

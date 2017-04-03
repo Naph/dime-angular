@@ -18,7 +18,8 @@
     "bootstrap": "4.0.0-alpha.6",
     "clean-webpack-plugin": "^0.1.15",
     "css-loader": "^0.26.1",
-    "extract-text-webpack-plugin": "beta",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "font64-loader": "^2.1.7",
     "html-webpack-plugin": "^2.28.0",
     "node-sass": "^4.5.0",
     "normalize.css": "^5.0.0",
@@ -41,7 +42,10 @@
     "@angular/router": "^3.4.7",
     "@ngtools/webpack": "^1.2.10",
     "core-js": "^2.4.1",
+    "icon-maker-loader": "^0.1.11",
+    "resolve-url-loader": "^2.0.2",
     "rxjs": "^5.1.1",
+    "whatwg-fetch": "^2.0.2",
     "zone.js": "^0.7.7"
   }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'getgood',
+  selector: 'dime-app',
   templateUrl: './app.component.html'
 })
 export class AppComponent {

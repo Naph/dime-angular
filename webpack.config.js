@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const publicPath = '/';
 
-module.exports = (env) => webpackMerge(require('./config/' + env + '.js'), {
+module.exports = (env, api) => webpackMerge(require('./config/' + env + '.js'), {
   entry: {
     polyfills: 'polyfills.ts',
     vendor: 'vendor.ts',
@@ -16,19 +16,47 @@ module.exports = (env) => webpackMerge(require('./config/' + env + '.js'), {
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath,
-    filename: '[name].js',
-    sourceMapFilename: '[name].map'
+    filename: 'js/[name].[hash].js',
+    sourceMapFilename: 'js/[name].[hash].map'
   },
   module: {
     rules: [{
+      test: /\.html$/,
+      loader: 'raw-loader'
+    }, {
       test: /\.scss$/,
       loaders: ExtractTextPlugin.extract({
-        fallback: 'style-loader', use: 'css-loader?-url!sass-loader'
+        fallback: 'style-loader', use: 'css-loader?-url!resolve-url-loader!sass-loader?sourceMap'
       })
+    }, {
+      test: /\.(png|gif|jpe?g|svg)$/,
+      exclude: path.resolve(__dirname, 'src/icons'),
+      loader: 'file-loader',
+      options: {
+        name: 'images/[name].[ext]'
+      }
+    }, {
+      test: /\.svg$/,
+      include: path.resolve(__dirname, 'src/icons'),
+      loaders: 'icon-maker-loader',
+      options: {
+        fontFamily: 'icon'
+      }
+    }, {
+      test: /\.css$/,
+      use: ExtractTextPlugin.extract({
+        use: 'css-loader'
+      })
+    }, {
+      test: /\.(eot|ttf|woff|woff2)$/,
+      loader: 'file-loader',
+      options: {
+        name: 'fonts/[name].[ext]'
+      }
     }]
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json', '.scss'],
+    extensions: ['.ts', '.js', '.json'],
     modules: [
       'node_modules',
       path.resolve(__dirname, 'src')
@@ -39,6 +67,7 @@ module.exports = (env) => webpackMerge(require('./config/' + env + '.js'), {
 
     new webpack.DefinePlugin({
       'process.env': {
+        'API_LOCATION': JSON.stringify(api || 'http://hostname/api/'),
         'NODE_ENV': JSON.stringify(env)
       }
     }),
@@ -48,6 +77,7 @@ module.exports = (env) => webpackMerge(require('./config/' + env + '.js'), {
     }),
     new CleanWebpackPlugin(['dist']),
 
-    new ExtractTextPlugin('[name].css')
-  ]
+    new ExtractTextPlugin('css/[name].[chunkhash].css')
+  ],
+  devtool: 'source-map'
 });

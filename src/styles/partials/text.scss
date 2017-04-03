@@ -1,0 +1,11 @@
+.text {
+  &-primary   { color: $brand-primary; }
+  &-secondary { color: $brand-secondary; }
+  &-tertiary  { color: $brand-tertiary; }
+
+  &-base-size { font-size: $font-size-base }
+  &-small     { font-size: $small-font-size }
+
+  &-semi-bold { font-weight: 500; }
+  &-thin      { font-weight: 300; }
+}

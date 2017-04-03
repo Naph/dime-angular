@@ -1,0 +1,8 @@
+$nav-item-margin:               .2rem;
+$nav-item-inline-spacer:        1rem;
+$nav-link-padding-x:            .35em;
+$nav-link-padding-y:            .2em;
+$nav-link-padding:              $nav-link-padding-y $nav-link-padding-x;
+$nav-link-hover-bg:             $gray-lighter;
+$nav-link-active-color:         lighten($brand-primary, 50%);
+$nav-disabled-link-color:       $gray-light;

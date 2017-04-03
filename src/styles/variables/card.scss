@@ -1,0 +1,21 @@
+$card-spacer-x:            1.25rem;
+$card-spacer-y:            .75rem;
+$card-border-width:        0;
+$card-border-radius:       0;
+$card-border-color:        rgba($black,.125);
+$card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width});
+$card-cap-bg:              $gray-lightest;
+$card-bg:                  $white;
+
+$card-link-hover-color:    $white;
+
+$card-img-overlay-padding: 1.25rem;
+
+$card-deck-margin:         ($grid-gutter-width-base / 2);
+
+$card-columns-count:       3;
+$card-columns-gap:         1.25rem;
+$card-columns-margin:      $card-spacer-y;
+
+$card-box-shadow:          .25em .25em 0 0 rgba($gray,.25);
+$card-box-shadow-hover:    .5em .5em 0 0 rgba($gray,.4);

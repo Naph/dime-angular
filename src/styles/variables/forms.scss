@@ -1,0 +1,49 @@
+$input-padding-x:                .75rem;
+$input-padding-y:                .8rem;
+$input-line-height:              1.25;
+
+$input-bg:                       $white;
+$input-bg-disabled:              $gray-lighter;
+
+$input-color:                    $gray-darker;
+$input-border-color:             rgba($black,.15);
+$input-btn-border-width:         $border-width;
+$input-box-shadow:               inset 0 1px 1px rgba($black,.075);
+
+$input-border-radius:            0;
+$input-border-radius-lg:         0;
+$input-border-radius-sm:         0;
+
+$input-bg-focus:                 $input-bg;
+$input-border-focus:             darken($brand-secondary, 10%);
+$input-box-shadow-focus:         $input-box-shadow, rgba($input-border-focus, .6);
+$input-color-focus:              $input-color;
+
+$input-color-placeholder:        $body-bg;
+
+$input-padding-x-sm:             .5rem;
+$input-padding-y-sm:             .25rem;
+
+$input-padding-x-lg:             1.5rem;
+$input-padding-y-lg:             .75rem;
+
+$input-height:                   (($font-size-base * $input-line-height) + ($input-padding-y * 2));
+$input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2));
+$input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2));
+
+$input-transition:               border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+$form-text-margin-top:           .25rem;
+$form-feedback-margin-top:       $form-text-margin-top;
+
+$form-check-margin-bottom:       .5rem;
+$form-check-input-gutter:        1.25rem;
+$form-check-input-margin-y:      .25rem;
+$form-check-input-margin-x:      .25rem;
+
+$form-check-inline-margin-x:     .75rem;
+
+$form-group-margin-bottom:       $spacer-y;
+
+$input-group-addon-bg:           $gray-lighter;
+$input-group-addon-border-color: $input-border-color;

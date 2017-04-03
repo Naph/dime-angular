@@ -1,0 +1,10 @@
+.flex-justify {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.col-expand {
+  flex: 1 0 auto;
+  width: auto;
+}

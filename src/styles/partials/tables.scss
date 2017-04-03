@@ -1,0 +1,36 @@
+.table {
+  border-collapse: separate;
+  border-spacing: .25em .1em;
+
+  thead th {
+    font-weight: 400;
+    border: .25em solid transparent;
+
+    &.primary {
+      border-bottom-color: $brand-primary;
+    }
+
+    &.secondary {
+      border-bottom-color: $brand-secondary;
+    }
+
+    &.tertiary {
+      border-bottom-color: $brand-tertiary;
+    }
+  }
+
+  @each $breakpoint in map-keys($grid-gutter-widths) {
+    @include media-breakpoint-up($breakpoint) {
+      $gutter: map-get($grid-gutter-widths, $breakpoint);
+
+      td, th {
+        &:first-child {
+          padding-left: ($gutter / 2);
+        }
+        &:last-child {
+          padding-right: ($gutter / 2);
+        }
+      }
+    }
+  }
+}

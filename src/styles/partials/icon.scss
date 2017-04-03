@@ -1,0 +1,15 @@
+.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.icon:before {
+  font-family: 'icon';
+  font-size: 1.15em;
+  font-weight: normal;
+  vertical-align: top;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}

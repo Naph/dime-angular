@@ -1,10 +1,7 @@
-@at-root {
-  @-ms-viewport { width: device-width; }
-}
-
 html {
   box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
+  font: $font-weight-base unquote(14px + '/' + $line-height-base) $font-family-base;
+  -webkit-font-smoothing: antialiased;
 }
 
 *,
@@ -13,10 +10,10 @@ html {
   box-sizing: inherit;
 }
 
-html {
-  font: $font-weight-base unquote(14px + '/' + $line-height-base) $font-family-base;
+body {
+  margin: 0;
 }
 
-section {
+main {
   @extend .container-fluid;
 }

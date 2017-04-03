@@ -1,0 +1,17 @@
+$table-cell-padding:            .5rem;
+$table-sm-cell-padding:         .3rem;
+
+$table-bg:                      transparent;
+
+$table-inverse-bg:              $gray-dark;
+$table-inverse-color:           $body-bg;
+
+$table-bg-accent:               rgba($gray,.05);
+$table-bg-hover:                rgba($gray,.1);
+$table-bg-active:               $table-bg-hover;
+
+$table-head-bg:                 $gray-lighter;
+$table-head-color:              $gray;
+
+$table-border-width:            0;
+$table-border-color:            $gray-lighter !default;
