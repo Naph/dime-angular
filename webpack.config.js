@@ -29,6 +29,17 @@ module.exports = (env, api) => webpackMerge(require('./config/' + env + '.js'), 
         fallback: 'style-loader', use: 'css-loader?-url!resolve-url-loader!sass-loader?sourceMap'
       })
     }, {
+      test: /\.css$/,
+      use: ExtractTextPlugin.extract({
+        use: 'css-loader'
+      })
+    }, {
+      test: /\.(eot|ttf|woff|woff2)$/,
+      loader: 'file-loader',
+      options: {
+        name: 'fonts/[name].[ext]'
+      }
+    }, {
       test: /\.(png|gif|jpe?g|svg)$/,
       exclude: path.resolve(__dirname, 'src/icons'),
       loader: 'file-loader',
@@ -41,17 +52,6 @@ module.exports = (env, api) => webpackMerge(require('./config/' + env + '.js'), 
       loaders: 'icon-maker-loader',
       options: {
         fontFamily: 'icon'
-      }
-    }, {
-      test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        use: 'css-loader'
-      })
-    }, {
-      test: /\.(eot|ttf|woff|woff2)$/,
-      loader: 'file-loader',
-      options: {
-        name: 'fonts/[name].[ext]'
       }
     }]
   },
